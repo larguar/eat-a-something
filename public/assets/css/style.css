@@ -1,17 +1,21 @@
 body {
     font-family: proxima-nova, sans-serif;
-    color: #32462c;
+    color: #de473e;
 }
 .container-fluid {
     text-align: center;
 }
 #uneaten {
-    background: #32462c;
-    color: #ebb87d;
+    background: #de473e;
+    background: url(../img/dan-gold-E6HjQaB7UEA-unsplash.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: #efe6db;
 }
 #devoured {
-    background: #ebb87d;
-    color: #32462c;
+    background: #efe6db;
+    background: url(http://api.thumbr.it/whitenoise-361x370.png?background=efe6dbff&noise=626262&density=30&opacity=10) repeat;
+    color: #de473e;
 }
 #uneaten, #devoured {
 	padding: 40px;
@@ -29,6 +33,7 @@ p.pre {
     letter-spacing: 0.5px;
     font-size: 14px;
     margin-bottom: 10px;
+    color: #f96158;
 }
 ul {
     padding: 0;
@@ -44,13 +49,20 @@ li {
     display: inline;
 }
 a.btn.btn-primary {
-    background: #ebb87d;
+    background: #de473e;
     border: none;
     border-radius: 50px;
-    color: #32462c;
+    color: #efe6db;
     padding: 14px 24px 12px;
     font-size: 17px;
     margin-top: 8px;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+	background: #de473e;
+	border: none;
+}
+.btn-primary.focus, .btn-primary:focus {
+	box-shadow: none!important;
 }
 #devoured li {
     padding: 10px 20px;
@@ -71,14 +83,14 @@ form input, form button {
 }
 input {
 	background: transparent;
-	color: #32462c;
+	color: #de473e;
 }
 input:focus {
     outline: none;
 }
 form.create-form {
     width: auto;
-    background: #ebb87d;
+    background: #efe6db;
     display: inline-block;
     padding-left: 25px;
     border-radius: 50px;
@@ -87,20 +99,23 @@ form.create-form {
 button.btn.btn-primary {
     padding: 6px 25px;
     border-radius: 50px;
-    background: #32462c;
+    background: #de473e;
     border: none;
-    color: #ebb87d;
+    color: #efe6db;
     margin-top: -2px;
 }
+a.btn.btn-primary:hover, button.btn.btn-primary:hover {
+	background: #da3027;
+}
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #32462c;
+  color: #de473e;
   opacity: 1; /* Firefox */
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #32462c;
+  color: #de473e;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
-  color: #32462c;
+  color: #de473e;
 }
 section#devoured h2 {
     margin-bottom: 40px;
@@ -127,7 +142,7 @@ section#devoured h2 {
 	    display: block;
 	}
 	input {
-	    background: #ebb87d;
+	    background: #efe6db;
 	    padding: 0 20px;
 	    border-radius: 50px;
 	    width: 70%;
