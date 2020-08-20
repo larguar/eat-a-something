@@ -59,7 +59,7 @@ a.btn.btn-primary {
     font-size: 20px;
 }
 header {
-    padding: 60px 15px;
+    padding: 60px 15px 45px;
 }
 h1 {
     max-width: 280px;
@@ -104,6 +104,13 @@ button.btn.btn-primary {
 }
 section#devoured h2 {
     margin-bottom: 40px;
+}
+.alert {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    padding: 10px;
 }
 
 
