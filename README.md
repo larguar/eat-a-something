@@ -1,36 +1,30 @@
 # Eat-A-Something
-{Add Project Description}
+A simple web app for you to devour your favorite foods. Add any restaurant food item to your list of available foods to eat, and at the click of a button, devour them. All food items added by the user live in a SQL database and are sorted on the front-end by whether or not they’ve been devoured yet.
 
 ![HTML Badge](https://img.shields.io/badge/-HTML-323795) ![CSS Badge](https://img.shields.io/badge/-CSS-01A990) ![JavaScript Badge](https://img.shields.io/badge/-JavaScript-539436) ![API Badge](https://img.shields.io/badge/-API-F58021) ![Node.JS Badge](https://img.shields.io/badge/-Node.JS-CF1848) ![Express.JS Badge](https://img.shields.io/badge/-Express.JS-750460) ![MySQL Badge](https://img.shields.io/badge/-MySQL-61489C)  
 
-![Application Screenshot](sdvnsdfv)
-
-
-## User Story
-```
-As a {Add User Story}
-I want {Add User Story}
-So that {Add User Story}
-```
+![Application Screenshot](img/screenshot.png)
 
 
 ## Functionality
 ```
-{Add Functionality Highlights}
+WHEN I visit the deployed application
+THEN I can view my list of available foods to eat
+WHEN I add a new food item
+THEN that food item is added to the 'Food to Eat' section
+WHEN I click the 'Devour It' button under a food item
+THEN that food item is moved to the 'Devoured' section
+WHEN I refresh the page
+THEN all of my items stay where they are and nothing is impacted
 ```
 
 
 ## Table of Contents 
-* [Install](#installation)
 * [Usage](#usage)    
 * [Credits](#credits) 
 * [Questions](#questions) 
 * [Donate](#donate)
 * [License](#license) 
-
-
-## Installation
-* sdfv
 
 
 ## Usage 
