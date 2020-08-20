@@ -1,0 +1,134 @@
+body {
+    font-family: proxima-nova, sans-serif;
+    color: #32462c;
+}
+.container-fluid {
+    text-align: center;
+}
+#uneaten {
+    background: #32462c;
+    color: #ebb87d;
+}
+#devoured {
+    background: #ebb87d;
+    color: #32462c;
+}
+#uneaten, #devoured {
+	padding: 40px;
+}
+h1, h2, h3, .btn {
+	font-family: salvation, sans-serif;
+}
+h2 {
+    font-size: 22px;
+    margin: 20px 0;
+}
+p.pre {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.form-group {
+    display: inline;
+}
+a.btn.btn-primary {
+    background: #ebb87d;
+    border: none;
+    border-radius: 50px;
+    color: #32462c;
+    padding: 14px 24px 12px;
+    font-size: 17px;
+    margin-top: 8px;
+}
+#devoured li {
+    padding: 10px 20px;
+}
+#devoured h3 {
+    font-size: 20px;
+}
+header {
+    padding: 60px 15px;
+}
+h1 {
+    max-width: 280px;
+    margin: 0 auto 40px;
+}
+form input, form button {
+    height: 50px;
+    border: 0;
+}
+input {
+	background: transparent;
+	color: #32462c;
+}
+input:focus {
+    outline: none;
+}
+form.create-form {
+    width: auto;
+    background: #ebb87d;
+    display: inline-block;
+    padding-left: 25px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+button.btn.btn-primary {
+    padding: 6px 25px;
+    border-radius: 50px;
+    background: #32462c;
+    border: none;
+    color: #ebb87d;
+    margin-top: -2px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #32462c;
+  opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #32462c;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #32462c;
+}
+section#devoured h2 {
+    margin-bottom: 40px;
+}
+
+
+@media screen and (max-width: 575px) {
+	form.create-form {
+	    width: 100%;
+	    background: transparent;
+	    display: block;
+	    padding-left: 0;
+	    border-radius: 0;
+	    overflow: visible;
+	}
+	.form-group {
+	    display: block;
+	}
+	input {
+	    background: #ebb87d;
+	    padding: 0 20px;
+	    border-radius: 50px;
+	    width: 70%;
+	}
+	header h2 {
+	    margin: 10px 0;
+	}
+	#uneaten, #devoured {
+	    padding: 40px 15px 30px;
+	}
+}
