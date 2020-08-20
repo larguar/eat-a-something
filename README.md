@@ -20,21 +20,14 @@ THEN all of my items stay where they are and nothing is impacted
 
 
 ## Table of Contents 
-* [Usage](#usage)    
 * [Credits](#credits) 
 * [Questions](#questions) 
 * [Donate](#donate)
-* [License](#license) 
-
-
-## Usage 
-sdvfsvf
-
-![Application Screenshot](ssdfv)    
+* [License](#license)  
 
 
 ## Credits
-This project utilizes a SQL database to store foods. 
+This project utilizes a [Express](https://www.npmjs.com/package/express), [Express Handlebars](https://www.npmjs.com/package/express-handlebars), and a [MySQL](https://www.npmjs.com/package/mysql) database to store all foods. Table flat lay image from [Dan Gold on Unsplash](https://unsplash.com/photos/E6HjQaB7UEA). Background noise generated through [cssmatic.com](https://www.cssmatic.com/noise-texture).
 
 
 ## Questions
