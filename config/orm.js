@@ -26,7 +26,7 @@ function objToSql(ob) {
 
 const orm = {
 	all: (tableInput, cb) => {
-		const queryString = `SELECT * FROM ${tableInput}`;
+		const queryString = `SELECT * FROM ${tableInput} ORDER BY id DESC`;
 		connection.query(queryString, (err, result) => {
 			if (err) throw err;
 			cb(result);
