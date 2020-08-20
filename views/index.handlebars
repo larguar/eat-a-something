@@ -1,21 +1,21 @@
-<h1>Food</h1>
+<h1>Eat-A-Something</h1>
 
 <h2>Food to Eat:</h2>
 
 <ul>
 {{#each foods}}
-	{{#unless eaten}}
-		{{> foods/food-block eaten=true}}
+	{{#unless devoured}}
+		{{> food/food-block devoured=true}}
 	{{/unless}}
 {{/each}}
 </ul>
 
-<h2>Eaten Already:</h2>
+<h2>Devoured:</h2>
 
 <ul>
 {{#each foods}}
-	{{#if eaten}}
-		{{> foods/food-block eaten=false}}
+	{{#if devoured}}
+		{{> food/food-block devoured=false}}
 	{{/if}}
 {{/each}}
 </ul>
@@ -28,18 +28,12 @@
 		<label for="re">Restaurant:</label>
 		<input type="text" id="re" name="restaurant">
 	</div>
-	
+
 	<div class="form-group">
-		<label for="ca">Food Item:</label>
+		<label for="ca">Food Name:</label>
 		<input type="text" id="ca" name="foodItem">
 	</div>
-	
-	<div class="form-group">
-		<label for="eaten">Eaten?</label><br>
-		<input type="radio" name="eaten" value="1" checked> Eaten!<br>
-		<input type="radio" name="eaten" value="0"> Not Yet
-	</div>
-	
-	<button type="submit">Add Food</button>
-	
+
+	<button class ="btn btn-primary" type="submit">Add Food</button>
+
 </form>

@@ -1,5 +1,5 @@
 INSERT INTO 
-foods (restaurant, foodItem, eaten) 
+foods (restaurant, foodItem, devoured) 
 
 VALUES 
 ('Taco Bell', 'Black Bean Crunchwrap Supreme', false), 

@@ -3,55 +3,44 @@ const connection = require('../config/connection.js');
 // creates a ? for each item being passed – e.g. ['?', '?', '?'].toString() would return '?,?,?'
 function printQuestionMarks(num) {
 	const arr = [];
-	for (let i of num) {
+	for (let i = 0; i < num; i++) {
 		arr.push('?');
 	}
 	return arr.toString();
 }
 
 // convert object key/value pairs to SQL
-function objectToSql(objName) {
+function objToSql(ob) {
 	const arr = [];
-	for (let key in objName) {
-		let value = objName[key];
-		if (Object.hasOwnProperty.call(objName, key)) {
+	for (let key in ob) {
+		let value = ob[key];
+		if (Object.hasOwnProperty.call(ob, key)) {
 			if (typeof value === 'string' && value.indexOf(' ') >= 0) {
-				value = `'${value}'`;
+				value = '\'' + value + '\'';
 			}
-			arr.push(`${key}=${value}`);
+			arr.push(key + '=' + value);
 		}
 	}
 	return arr.toString();
 }
 
 const orm = {
-	all: (table, cd) => {
-		const queryString = `SELECT * FROM ${table}`;
-		console.log('orm all queryString:', queryString);
+	all: (tableInput, cb) => {
+		const queryString = `SELECT * FROM ${tableInput}`;
 		connection.query(queryString, (err, result) => {
 			if (err) throw err;
 			cb(result);
 		});
 	},
 	create: (table, cols, vals, cb) => {
-		const queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(vals.length)})`;
-		console.log('orm create queryString:', queryString);
+		const queryString = 'INSERT INTO ' + table + ' (' + cols.toString() + ') VALUES (' + printQuestionMarks(vals.length) + ') ';
 		connection.query(queryString, vals, (err, result) => {
 			if (err) throw err;
 			cb(result);
 		});
 	},
-	update: (table, objColVals, condition, cb) {
-		const queryString = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`;
-		console.log('orm update queryString:', queryString);
-		connection.query(queryString, (err, result) => {
-			if (err) throw err;
-			cb(result);
-		});
-	},
-	delete: (table, condition, cb) {
-		const queryString = `DELETE FROM ${table} WHERE ${condition}`;
-		console.log('orm delete queryString:', queryString);
+	update: (table, objColVals, condition, cb) => {
+		const queryString = 'UPDATE ' + table + ' SET ' + objToSql(objColVals) + ' WHERE ' + condition;
 		connection.query(queryString, (err, result) => {
 			if (err) throw err;
 			cb(result);

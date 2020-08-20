@@ -1,44 +1,29 @@
 $(function() {
-	
-	$('.change-status').on('click', event => {
-		const id = $(this).data('id');
-		const newStatus = $(this).data('newstatus');	
-		const newEatenState = {
-			eaten: newStatus
-		};
+
+	$('.change-status').on('click', function(event) {
+    	const id = $(this).data('id');
+		const newStatus = $(this).data('newstatus');
+		const newDevouredState = { devoured: newStatus };
 		$.ajax('/api/foods/' + id, {
 			type: 'PUT',
-			data: newEatenState
-		}).then(function() {
-			console.log('changed status to', newStatus);
-			location.reload();
-		});
-	});
+			data: newDevouredState
+    	}).then(() => {
+        	location.reload();
+      	});
+  	});
 
-	$('.create-form').on('submit', e => {
-		e.preventDefault();	
+  	$('.create-form').on('submit', function(event) {
+    	event.preventDefault();
 		const newFood = {
-			restaurant: $('#re').val().trim(),
-			foodItem: $('#ca').val().trim(),
-			eaten: $('[name=eaten]:checked').val().trim()
+			restaurant: $('#re').val().trim(), 
+			foodItem: $('#ca').val().trim()
 		};
 		$.ajax('/api/foods', {
 			type: 'POST',
 			data: newFood
-		}).then(function() {
-			console.log('created new food');
+    	}).then(() => {
 			location.reload();
-		});
-	});
-  
-	$('.delete-food').on('click', event => {
-		const id = $(this).data('id');
-		$.ajax('/api/foods/' + id, {
-			type: 'DELETE'
-		}).then(function() {
-			console.log('deleted food', id);
-			location.reload();
-		});
-	});
-  
+      	});
+  	});
+
 });
